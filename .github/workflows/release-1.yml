@@ -27,5 +27,6 @@ jobs:
           node-version: ${{ inputs.node_version }}
       - run: npm ci
       - run: npx semantic-release@19.0.5
+      - run: npm install @semantic-release/changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
