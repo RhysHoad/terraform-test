@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ inputs.node_version }}
-      - run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+      - run: npm i -D semantic-release @semantic-release/{git,commit-analyzer,release-notes-generator,npm,changelog}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm install
